@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — HackIndia 2026</title>
+<meta name="description" content="Everything you need to know before participating in HackIndia 2026.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="f&q.css">
+<link rel="stylesheet" href="nav.css">
+</head>
+<body>
+
+<!-- ============ NOISE / GRAIN OVERLAY ============ -->
+<div class="grain-overlay"></div>
+
+<!-- ============ CURSOR SPOTLIGHT ============ -->
+<div class="cursor-spotlight" id="cursorSpotlight"></div>
+
+<!-- ============ LOADER ============ -->
+<div class="loader" id="loader">
+  <canvas id="loaderCanvas"></canvas>
+  <div class="loader-content">
+    <div class="loader-logo">HACK<span>INDIA</span></div>
+    <div class="loader-bar">
+      <div class="loader-bar-fill" id="loaderBarFill"></div>
+    </div>
+    <div class="loader-percent" id="loaderPercent">0<span>%</span></div>
+    <div class="loader-tag">INITIALIZING FAQ MODULE</div>
+  </div>
+</div>
+
+<!-- ============ AMBIENT BACKGROUND (whole page) ============ -->
+<canvas id="bgCanvas" class="bg-canvas"></canvas>
+<div class="aurora-mesh" aria-hidden="true"></div>
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="home.html">
+      <span class="brand-mark"></span>
+      HackIndia
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <a href="home.html">Home</a>
+      <a href="about.html">About MITS</a>
+      <a href="track.html">Tracks</a>
+      <a href="time.html">Timeline</a>
+      <a href="round.html">Rounds</a>
+      <a href="judge.html">Judges</a>
+      <a href="sponsors.html">Sponsors</a>
+      <a href="f&q.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="devloper.html">Developer</a>
+
+    </nav>
+
+    <a href="#register" class="btn btn-primary nav-cta">Register Now</a>
+
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="smooth-wrapper">
+<div id="smooth-content">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-3d" id="heroCanvasWrap">
+      <canvas id="heroCanvas"></canvas>
+    </div>
+
+    <div class="hero-inner">
+      <p class="hero-eyebrow" data-reveal>
+        <span class="eyebrow-dot"></span> HACKINDIA 2026 &mdash; SUPPORT CENTER
+      </p>
+
+      <h1 class="hero-title" data-reveal>
+        <span class="line line-1">Frequently Asked</span>
+        <span class="line line-2">Questions</span>
+      </h1>
+
+      <p class="hero-subtitle" data-reveal>
+        Everything you need to know before participating in HackIndia 2026.
+      </p>
+
+      <div class="hero-typing" data-reveal>
+        <span id="typingText"></span><span class="typing-cursor">|</span>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" id="scrollIndicator">
+      <span>SCROLL</span>
+      <div class="scroll-line"><div class="scroll-line-fill"></div></div>
+    </div>
+  </section>
+
+  <!-- ============ SEARCH ============ -->
+  <section class="search-section">
+    <div class="search-box glass" id="searchBox">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none">
+        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M21 21L16.5 16.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <input type="text" id="searchInput" placeholder="" autocomplete="off" spellcheck="false">
+      <span class="search-kbd">/</span>
+      <div class="search-border"></div>
+    </div>
+    <p class="search-meta" id="searchMeta">10 questions across 7 categories</p>
+  </section>
+
+  <!-- ============ CATEGORY FILTERS ============ -->
+  <section class="filters-section">
+    <div class="filters" id="filters">
+      <button class="filter-btn is-active" data-filter="all"><span>All</span></button>
+      <button class="filter-btn" data-filter="general"><span>General</span></button>
+      <button class="filter-btn" data-filter="registration"><span>Registration</span></button>
+      <button class="filter-btn" data-filter="teams"><span>Teams</span></button>
+      <button class="filter-btn" data-filter="rules"><span>Rules</span></button>
+      <button class="filter-btn" data-filter="certificates"><span>Certificates</span></button>
+      <button class="filter-btn" data-filter="venue"><span>Venue</span></button>
+      <button class="filter-btn" data-filter="technology"><span>Technology</span></button>
+    </div>
+  </section>
+
+  <!-- ============ FAQ LIST ============ -->
+  <section class="faq-section" id="faq-section">
+    <div class="faq-list" id="faqList">
+
+      <article class="faq-card glass" data-category="general" data-index="01">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-num">01</span>
+          <span class="faq-q-text">What is HackIndia 2026?</span>
+          <span class="faq-icon"><span></span><span></span></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>HackIndia 2026 is a national-level innovation hackathon organized by Madhav Institute of Technology &amp; Science (MITS), bringing together students, developers, designers, and innovators to solve real-world challenges using technology.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="faq-card glass" data-category="registration" data-index="02">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-num">02</span>
+          <span class="faq-q-text">Who can participate?</span>
+          <span class="faq-icon"><span></span><span></span></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Students from any recognized college or university can participate individually or in teams according to the official rules.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="faq-card glass" data-category="registration" data-index="03">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-num">03</span>
+          <span class="faq-q-text">Is there any registration fee?</span>
+          <span class="faq-icon"><span></span><span></span></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p><strong>No.</strong> Participation is completely free.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="faq-card glass" data-category="teams" data-index="04">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-num">04</span>
+          <span class="faq-q-text">What is the maximum team size?</span>
+          <span class="faq-icon"><span></span><span></span></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>A team can consist of up to <strong>4 members</strong>.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="faq-card glass" data-category="teams" data-index="05">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-num">05</span>
+          <span class="faq-q-text">Can I participate individually?</span>
+          <span class="faq-icon"><span></span><span></span></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p><strong>Yes.</strong> Solo participation is allowed.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="faq-card glass" data-category="certificates" data-index="06">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-num">06</span>
+          <span class="faq-q-text">Will certificates be provided?</span>
+          <span class="faq-icon"><span></span><span></span></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p><strong>Yes.</strong> The following certificates are issued:</p>
+            <ul class="faq-list-items">
+              <li>Participation Certificates</li>
+              <li>Finalist Certificates</li>
+              <li>Winner Certificates</li>
+              <li>Mentor Certificates</li>
+              <li>Volunteer Certificates</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="faq-card glass" data-category="rules" data-index="07">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-num">07</span>
+          <span class="faq-q-text">What is the hackathon duration?</span>
+          <span class="faq-icon"><span></span><span></span></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>The hackathon unfolds across two rounds:</p>
+            <ul class="faq-list-items">
+              <li><strong>Round 1</strong> — Online PPT Submission</li>
+              <li><strong>Round 2</strong> — Offline Final Presentation</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="faq-card glass" data-category="general" data-index="08">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-num">08</span>
+          <span class="faq-q-text">Can first-year students participate?</span>
+          <span class="faq-icon"><span></span><span></span></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p><strong>Yes.</strong> Students from all years are welcome.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="faq-card glass" data-category="venue" data-index="09">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-num">09</span>
+          <span class="faq-q-text">Will food and accommodation be provided?</span>
+          <span class="faq-icon"><span></span><span></span></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p><strong>Yes.</strong> For offline finalists.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="faq-card glass" data-category="technology" data-index="10">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-num">10</span>
+          <span class="faq-q-text">What technologies are allowed?</span>
+          <span class="faq-icon"><span></span><span></span></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Any of the following domains are welcome:</p>
+            <div class="faq-tech-tags">
+              <span>AI</span><span>Machine Learning</span><span>Web Development</span><span>IoT</span>
+              <span>Blockchain</span><span>Cyber Security</span><span>Cloud Computing</span>
+              <span>AR/VR</span><span>Mobile Apps</span><span>Open Innovation</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="no-results" id="noResults">
+      <div class="no-results-glyph">?</div>
+      <p>No matching questions found.</p>
+      <button id="resetSearch">Clear search</button>
+    </div>
+  </section>
+
+  <!-- ============ HELP SECTION ============ -->
+  <section class="help-section" id="help-section">
+    <div class="help-card glass">
+      <div class="help-border"></div>
+      <p class="help-eyebrow">Didn't find your answer?</p>
+      <h2 class="help-title">Still Have Questions?</h2>
+      <p class="help-sub">Our team is one message away, around the clock during the event.</p>
+
+      <div class="help-grid">
+        <a href="mailto:support@hackindia.dev" class="help-item">
+          <span class="help-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 6h18v12H3z" stroke="currentColor" stroke-width="1.5"/><path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.5"/></svg>
+          </span>
+          <span class="help-label">Email</span>
+          <span class="help-value">support@hackindia.dev</span>
+        </a>
+
+        <a href="tel:+911234567890" class="help-item">
+          <span class="help-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 9 9 0 0 0 2.8.45 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 9 9 0 0 0 .45 2.8 1 1 0 0 1-.25 1z" stroke="currentColor" stroke-width="1.4"/></svg>
+          </span>
+          <span class="help-label">Phone</span>
+          <span class="help-value">+91 12345 67890</span>
+        </a>
+
+        <a href="https://discord.gg/hackindia" target="_blank" rel="noopener" class="help-item">
+          <span class="help-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M8 9.5c2.5 1 5.5 1 8 0M9 15c1.7.6 4.3.6 6 0" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><rect x="4" y="7" width="16" height="11" rx="4" stroke="currentColor" stroke-width="1.4"/></svg>
+          </span>
+          <span class="help-label">Discord</span>
+          <span class="help-value">Join the server</span>
+        </a>
+
+        <a href="https://linkedin.com/company/hackindia" target="_blank" rel="noopener" class="help-item">
+          <span class="help-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.4"/><path d="M8 10v6M8 7.5v.01M12 16v-3.5c0-1.5 1-2.5 2.2-2.5S16 11 16 12.5V16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </span>
+          <span class="help-label">LinkedIn</span>
+          <span class="help-value">@hackindia</span>
+        </a>
+
+        <a href="https://instagram.com/hackindia" target="_blank" rel="noopener" class="help-item">
+          <span class="help-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.4"/><circle cx="17" cy="7" r="1" fill="currentColor"/></svg>
+          </span>
+          <span class="help-label">Instagram</span>
+          <span class="help-value">@hackindia</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <canvas id="footerCanvas" class="footer-canvas"></canvas>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">HACK<span>INDIA</span><i>26</i></a>
+          <p>Built by students, for students. See you on stage.</p>
+        </div>
+        <div class="footer-links">
+          <span class="footer-heading">Quick Links</span>
+          <a href="#hero">Home</a>
+          <a href="#faq-section">FAQs</a>
+          <a href="#help-section">Support</a>
+        </div>
+        <div class="footer-social">
+          <span class="footer-heading">Follow</span>
+          <div class="footer-social-icons">
+            <a href="https://discord.gg/hackindia" aria-label="Discord" target="_blank" rel="noopener">◈</a>
+            <a href="https://linkedin.com/company/hackindia" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+            <a href="https://instagram.com/hackindia" aria-label="Instagram" target="_blank" rel="noopener">◎</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 HackIndia · MITS</span>
+        <span>Made with <i class="heart">❤</i> by the HackIndia Team</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</main>
+
+<!-- ============ LIBRARIES ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.13/lenis.min.js"></script>
+
+<script src="f&q.js"></script>
+</body>
+</html>
