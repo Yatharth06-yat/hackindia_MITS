@@ -1,351 +1,370 @@
 /* ============================================================
    ABOUT MITS — STATS ROW
    ============================================================ */
-   .about-stats {
-    position: relative;
-    z-index: 6;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
-    margin-top: 8px;
-  }
-  
-  .stat-chip {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    padding: 14px 20px;
-    min-width: 110px;
-    border-radius: 14px;
-    background: rgba(16, 10, 32, 0.55);
-    border: 1px solid rgba(180, 140, 255, 0.25);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow:
-      0 4px 24px rgba(0, 0, 0, 0.35),
-      inset 0 1px 0 rgba(255, 255, 255, 0.05);
-    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-  }
-  
-  .stat-chip:hover {
-    transform: translateY(-4px);
-    border-color: rgba(79, 216, 255, 0.5);
-    box-shadow:
-      0 10px 30px rgba(79, 216, 255, 0.15),
-      inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  }
-  
-  .stat-num {
-    font-family: var(--font-display, 'Orbitron', sans-serif);
-    font-weight: 800;
-    font-size: 1.35rem;
-    line-height: 1;
-    background: linear-gradient(180deg, #ffffff 0%, #7ff2ff 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  
-  .stat-label {
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: rgba(230, 225, 250, 0.55);
-  }
-  
-  /* ============================================================
+.about-stats {
+  position: relative;
+  z-index: 6;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.stat-chip {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 20px;
+  min-width: 110px;
+  border-radius: 14px;
+  background: rgba(16, 10, 32, 0.55);
+  border: 1px solid rgba(180, 140, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-chip:hover {
+  transform: translateY(-4px);
+  border-color: rgba(79, 216, 255, 0.5);
+  box-shadow:
+    0 10px 30px rgba(79, 216, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.stat-num {
+  font-family: var(--font-display, 'Orbitron', sans-serif);
+  font-weight: 800;
+  font-size: 1.35rem;
+  line-height: 1;
+  background: linear-gradient(180deg, #ffffff 0%, #7ff2ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.stat-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: rgba(230, 225, 250, 0.55);
+}
+
+/* ============================================================
      BUTTONS
      ============================================================ */
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 13px 28px;
-    border-radius: 999px;
-    font-family: var(--font-display, 'Space Grotesk', sans-serif);
-    font-weight: 600;
-    font-size: 0.92rem;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    cursor: pointer;
-    border: 1px solid transparent;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
-  }
-  
-  .btn-primary {
-    background: linear-gradient(135deg, #8a5bff 0%, #4fd8ff 100%);
-    color: #05030a;
-    box-shadow: 0 6px 24px rgba(138, 91, 255, 0.35);
-  }
-  
-  .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 32px rgba(79, 216, 255, 0.45);
-  }
-  
-  .btn-outline {
-    background: rgba(16, 10, 32, 0.4);
-    color: var(--ink, #f1eefc);
-    border-color: rgba(180, 140, 255, 0.4);
-    backdrop-filter: blur(6px);
-  }
-  
-  .btn-outline:hover {
-    border-color: rgba(79, 216, 255, 0.7);
-    background: rgba(79, 216, 255, 0.08);
-    color: #7ff2ff;
-    transform: translateY(-2px);
-  }
-  
-  /* ============================================================
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 28px;
+  border-radius: 999px;
+  font-family: var(--font-display, 'Space Grotesk', sans-serif);
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #8a5bff 0%, #4fd8ff 100%);
+  color: #05030a;
+  box-shadow: 0 6px 24px rgba(138, 91, 255, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(79, 216, 255, 0.45);
+}
+
+.btn-outline {
+  background: rgba(16, 10, 32, 0.4);
+  color: var(--ink, #f1eefc);
+  border-color: rgba(180, 140, 255, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+.btn-outline:hover {
+  border-color: rgba(79, 216, 255, 0.7);
+  background: rgba(79, 216, 255, 0.08);
+  color: #7ff2ff;
+  transform: translateY(-2px);
+}
+
+/* ============================================================
      ABOUT THE HACKATHON SECTION
      ============================================================ */
-  .about-hackathon {
-    position: relative;
-    z-index: 3;
-    background-color: #05030a;
-    background-image: radial-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-    background-size: 3px 3px;
-    padding: 110px 0;
-    overflow: hidden;
-    isolation: isolate;
-  }
-
-  /* ---------- Layer 1: Ken-Burns background photo ---------- */
-  .about-hackathon::before {
-    content: "";
-    position: absolute;
-    inset: -5%;
-    z-index: -2;
-    background-image: url('images/bg-ab.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: saturate(0.75) brightness(0.55) contrast(1.05);
-    animation: ken-burns 26s ease-in-out infinite alternate;
-    pointer-events: none;
-  }
-
-  @keyframes ken-burns {
-    0%   { transform: scale(1) translate(0, 0); }
-    50%  { transform: scale(1.12) translate(-1.5%, 1%); }
-    100% { transform: scale(1.06) translate(1.5%, -1%); }
-  }
-
-  /* ---------- Layer 2: animated color-shifting gradient wash ---------- */
-  @property --wash-angle {
-    syntax: '<angle>';
-    inherits: false;
-    initial-value: 0deg;
-  }
-
-  .about-hackathon::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background:
-      radial-gradient(ellipse 50% 40% at 15% 20%, rgba(138, 79, 255, 0.22) 0%, transparent 65%),
-      radial-gradient(ellipse 45% 45% at 85% 80%, rgba(79, 216, 255, 0.18) 0%, transparent 60%),
-      conic-gradient(from var(--wash-angle) at 50% 50%, rgba(5, 3, 10, 0.2), rgba(5, 3, 10, 0.75), rgba(5, 3, 10, 0.2));
-    animation: wash-rotate 18s linear infinite;
-    pointer-events: none;
-  }
-
-  @keyframes wash-rotate {
-    to { --wash-angle: 360deg; }
-  }
-  
-  .about-hackathon-inner {
-    position: relative;
-    z-index: 2;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 40px;
-    text-align: center;
-  }
-  
-  .about-hackathon .about-text {
-    max-width: 760px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify;
+.about-hackathon {
+  position: relative;
+  z-index: 3;
+  background-color: #05030a;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 3px 3px;
+  padding: 110px 0;
+  overflow: hidden;
+  isolation: isolate;
 }
-  .hackathon-stats {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
-    margin: 40px 0 56px;
+
+/* ---------- Layer 1: Ken-Burns background photo ---------- */
+.about-hackathon::before {
+  content: "";
+  position: absolute;
+  inset: -5%;
+  z-index: -2;
+  background-image: url('images/bg-ab.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: saturate(0.75) brightness(0.55) contrast(1.05);
+  animation: ken-burns 26s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes ken-burns {
+  0% {
+    transform: scale(1) translate(0, 0);
   }
-  
-  /* ---------- Flow cards (Round 1 / Round 2) ---------- */
-  .hackathon-flow {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    margin-bottom: 48px;
-    text-align: left;
+
+  50% {
+    transform: scale(1.12) translate(-1.5%, 1%);
   }
-  
-  .flow-card {
-    position: relative;
-    padding: 30px 28px;
-    border-radius: 20px;
-    background: rgba(16, 10, 32, 0.5);
-    border: 1px solid rgba(180, 140, 255, 0.22);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    overflow: hidden;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+
+  100% {
+    transform: scale(1.06) translate(1.5%, -1%);
   }
-  
-  .flow-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(79, 216, 255, 0.06), transparent 60%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+}
+
+/* ---------- Layer 2: animated color-shifting gradient wash ---------- */
+@property --wash-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.about-hackathon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 50% 40% at 15% 20%, rgba(138, 79, 255, 0.22) 0%, transparent 65%),
+    radial-gradient(ellipse 45% 45% at 85% 80%, rgba(79, 216, 255, 0.18) 0%, transparent 60%),
+    conic-gradient(from var(--wash-angle) at 50% 50%, rgba(5, 3, 10, 0.2), rgba(5, 3, 10, 0.75), rgba(5, 3, 10, 0.2));
+  animation: wash-rotate 18s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes wash-rotate {
+  to {
+    --wash-angle: 360deg;
   }
-  
-  .flow-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(79, 216, 255, 0.45);
-    box-shadow: 0 16px 40px rgba(79, 216, 255, 0.12);
-  }
-  
-  .flow-card:hover::before {
-    opacity: 1;
-  }
-  
-  .flow-step {
-    display: inline-block;
-    padding: 5px 14px;
-    border-radius: 999px;
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #7ff2ff;
-    background: rgba(79, 216, 255, 0.1);
-    border: 1px solid rgba(79, 216, 255, 0.3);
-    margin-bottom: 16px;
-  }
-  
-  .flow-card h3 {
-    font-family: var(--font-display, 'Space Grotesk', sans-serif);
-    font-weight: 700;
-    font-size: 1.25rem;
-    color: var(--ink, #f1eefc);
-    margin: 0 0 10px;
-  }
-  
-  .flow-card p {
-    font-size: 0.94rem;
-    line-height: 1.6;
-    color: var(--ink-dim, rgba(230, 225, 250, 0.65));
-    margin: 0;
-  }
-  
-  /* ---------- Track pills ---------- */
-  .hackathon-tracks {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
-    margin-bottom: 44px;
-  }
-  
-  .track-pill {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    padding: 10px 20px;
-    border-radius: 999px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.01em;
-    color: var(--ink, #f1eefc);
-    background: rgba(16, 10, 32, 0.5);
-    border: 1px solid rgba(180, 140, 255, 0.3);
-    backdrop-filter: blur(6px);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-  
-  .track-pill:hover {
-    transform: translateY(-3px) scale(1.03);
-  }
-  
-  .track-pill--ai {
-    border-color: rgba(138, 91, 255, 0.5);
-  }
-  .track-pill--ai:hover {
-    box-shadow: 0 8px 24px rgba(138, 91, 255, 0.3);
-  }
-  .track-pill--ai .tag-dot {
-    background: #8a5bff;
-    box-shadow: 0 0 8px #8a5bff, 0 0 16px rgba(138, 91, 255, 0.6);
-  }
-  
-  .track-pill--web3 {
-    border-color: rgba(79, 216, 255, 0.5);
-  }
-  .track-pill--web3:hover {
-    box-shadow: 0 8px 24px rgba(79, 216, 255, 0.3);
-  }
-  .track-pill--web3 .tag-dot {
-    background: #4fd8ff;
-    box-shadow: 0 0 8px #4fd8ff, 0 0 16px rgba(79, 216, 255, 0.6);
-  }
-  
-  .track-pill--open {
-    border-color: rgba(255, 145, 210, 0.5);
-  }
-  .track-pill--open:hover {
-    box-shadow: 0 8px 24px rgba(255, 145, 210, 0.3);
-  }
-  .track-pill--open .tag-dot {
-    background: #ff91d2;
-    box-shadow: 0 0 8px #ff91d2, 0 0 16px rgba(255, 145, 210, 0.6);
-  }
-  
-  /* ============================================================
+}
+
+.about-hackathon-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.about-hackathon .about-text {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
+
+.hackathon-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin: 40px 0 56px;
+}
+
+/* ---------- Flow cards (Round 1 / Round 2) ---------- */
+.hackathon-flow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+  text-align: left;
+}
+
+.flow-card {
+  position: relative;
+  padding: 30px 28px;
+  border-radius: 20px;
+  background: rgba(16, 10, 32, 0.5);
+  border: 1px solid rgba(180, 140, 255, 0.22);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flow-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(79, 216, 255, 0.06), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.flow-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(79, 216, 255, 0.45);
+  box-shadow: 0 16px 40px rgba(79, 216, 255, 0.12);
+}
+
+.flow-card:hover::before {
+  opacity: 1;
+}
+
+.flow-step {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7ff2ff;
+  background: rgba(79, 216, 255, 0.1);
+  border: 1px solid rgba(79, 216, 255, 0.3);
+  margin-bottom: 16px;
+}
+
+.flow-card h3 {
+  font-family: var(--font-display, 'Space Grotesk', sans-serif);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--ink, #f1eefc);
+  margin: 0 0 10px;
+}
+
+.flow-card p {
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--ink-dim, rgba(230, 225, 250, 0.65));
+  margin: 0;
+}
+
+/* ---------- Track pills ---------- */
+.hackathon-tracks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 44px;
+}
+
+.track-pill {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--ink, #f1eefc);
+  background: rgba(16, 10, 32, 0.5);
+  border: 1px solid rgba(180, 140, 255, 0.3);
+  backdrop-filter: blur(6px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.track-pill:hover {
+  transform: translateY(-3px) scale(1.03);
+}
+
+.track-pill--ai {
+  border-color: rgba(138, 91, 255, 0.5);
+}
+
+.track-pill--ai:hover {
+  box-shadow: 0 8px 24px rgba(138, 91, 255, 0.3);
+}
+
+.track-pill--ai .tag-dot {
+  background: #8a5bff;
+  box-shadow: 0 0 8px #8a5bff, 0 0 16px rgba(138, 91, 255, 0.6);
+}
+
+.track-pill--web3 {
+  border-color: rgba(79, 216, 255, 0.5);
+}
+
+.track-pill--web3:hover {
+  box-shadow: 0 8px 24px rgba(79, 216, 255, 0.3);
+}
+
+.track-pill--web3 .tag-dot {
+  background: #4fd8ff;
+  box-shadow: 0 0 8px #4fd8ff, 0 0 16px rgba(79, 216, 255, 0.6);
+}
+
+.track-pill--open {
+  border-color: rgba(255, 145, 210, 0.5);
+}
+
+.track-pill--open:hover {
+  box-shadow: 0 8px 24px rgba(255, 145, 210, 0.3);
+}
+
+.track-pill--open .tag-dot {
+  background: #ff91d2;
+  box-shadow: 0 0 8px #ff91d2, 0 0 16px rgba(255, 145, 210, 0.6);
+}
+
+/* ============================================================
      RESPONSIVE
      ============================================================ */
-  @media (max-width: 860px) {
-    .hackathon-flow {
-      grid-template-columns: 1fr;
-    }
-  
-    .about-hackathon {
-      padding: 80px 0;
-    }
-  
-    .about-hackathon-inner {
-      padding: 0 24px;
-    }
+@media (max-width: 860px) {
+  .hackathon-flow {
+    grid-template-columns: 1fr;
   }
-  
-  @media (max-width: 560px) {
-    .about-stats,
-    .hackathon-stats {
-      gap: 10px;
-    }
-  
-    .stat-chip {
-      min-width: 96px;
-      padding: 12px 16px;
-    }
-  
-    .flow-card {
-      padding: 24px 20px;
-    }
+
+  .about-hackathon {
+    padding: 80px 0;
   }
-  /* ============================================================
+
+  .about-hackathon-inner {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .about-stats,
+  .hackathon-stats {
+    gap: 10px;
+  }
+
+  .stat-chip {
+    min-width: 96px;
+    padding: 12px 16px;
+  }
+
+  .flow-card {
+    padding: 24px 20px;
+  }
+}
+
+/* ============================================================
    MODERN CSS ENHANCEMENTS
    Layer this AFTER your existing about/hackathon CSS.
    Uses: @property, conic-gradient borders, container queries,
@@ -355,299 +374,340 @@
 
 /* ---------- Animatable custom property for rotating gradient borders ---------- */
 @property --border-angle {
-    syntax: '<angle>';
-    inherits: false;
-    initial-value: 0deg;
-  }
-  
-  /* ============================================================
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+/* ============================================================
      FLOW CARDS — animated conic-gradient border on hover
      ============================================================ */
-  .flow-card {
-    --border-angle: 0deg;
-    position: relative;
-    isolation: isolate;
-  }
-  
-  .flow-card::after {
-    content: "";
-    position: absolute;
-    inset: -1px;
-    border-radius: inherit;
-    padding: 1px;
-    background: conic-gradient(
-      from var(--border-angle),
+.flow-card {
+  --border-angle: 0deg;
+  position: relative;
+  isolation: isolate;
+}
+
+.flow-card::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(from var(--border-angle),
       transparent 0%,
       rgba(79, 216, 255, 0.9) 12%,
       transparent 24%,
-      transparent 100%
-    );
-    -webkit-mask:
-      linear-gradient(#000 0 0) content-box,
-      linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    animation: rotate-border 3.5s linear infinite paused;
-    pointer-events: none;
-    z-index: 1;
+      transparent 100%);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: rotate-border 3.5s linear infinite paused;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.flow-card:hover::after {
+  opacity: 1;
+  animation-play-state: running;
+}
+
+@keyframes rotate-border {
+  to {
+    --border-angle: 360deg;
   }
-  
-  .flow-card:hover::after {
-    opacity: 1;
-    animation-play-state: running;
-  }
-  
-  @keyframes rotate-border {
-    to { --border-angle: 360deg; }
-  }
-  
-  /* ---------- Shimmer sweep across stat chips on hover ---------- */
-  .stat-chip {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .stat-chip::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -60%;
-    width: 40%;
-    height: 100%;
-    background: linear-gradient(
-      115deg,
+}
+
+/* ---------- Shimmer sweep across stat chips on hover ---------- */
+.stat-chip {
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-chip::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(115deg,
       transparent 0%,
       rgba(255, 255, 255, 0.14) 50%,
-      transparent 100%
-    );
-    transform: skewX(-15deg);
-    transition: left 0.65s ease;
-    pointer-events: none;
-  }
-  
-  .stat-chip:hover::after {
-    left: 130%;
-  }
-  
-  /* ============================================================
+      transparent 100%);
+  transform: skewX(-15deg);
+  transition: left 0.65s ease;
+  pointer-events: none;
+}
+
+.stat-chip:hover::after {
+  left: 130%;
+}
+
+/* ============================================================
      CONTAINER QUERIES — cards adapt to their own wrapper width,
      not just the viewport (useful if this section is ever
      reused in a sidebar / narrower layout)
      ============================================================ */
-  .hackathon-flow {
-    container-type: inline-size;
-    container-name: flow-wrap;
+.hackathon-flow {
+  container-type: inline-size;
+  container-name: flow-wrap;
+}
+
+@container flow-wrap (max-width: 620px) {
+  .flow-card {
+    padding: 22px 20px;
   }
-  
-  @container flow-wrap (max-width: 620px) {
-    .flow-card {
-      padding: 22px 20px;
-    }
-    .flow-card h3 {
-      font-size: 1.1rem;
-    }
+
+  .flow-card h3 {
+    font-size: 1.1rem;
   }
-  
-  .about-hackathon-inner {
-    container-type: inline-size;
-    container-name: hackathon-wrap;
+}
+
+.about-hackathon-inner {
+  container-type: inline-size;
+  container-name: hackathon-wrap;
+}
+
+@container hackathon-wrap (max-width: 700px) {
+  .hackathon-tracks {
+    gap: 10px;
   }
-  
-  @container hackathon-wrap (max-width: 700px) {
-    .hackathon-tracks {
-      gap: 10px;
-    }
-    .track-pill {
-      padding: 8px 16px;
-      font-size: 0.78rem;
-    }
+
+  .track-pill {
+    padding: 8px 16px;
+    font-size: 0.78rem;
   }
-  
-  /* ============================================================
+}
+
+/* ============================================================
      SCROLL-DRIVEN REVEAL (progressive enhancement)
      Falls back silently to normal static layout in browsers
      without animation-timeline support — no JS needed.
      ============================================================ */
-  @supports (animation-timeline: view()) {
-    .flow-card,
-    .track-pill,
-    .stat-chip {
-      animation: fade-rise both;
-      animation-timeline: view();
-      animation-range: entry 0% cover 30%;
-    }
-  
-    @keyframes fade-rise {
-      from {
-        opacity: 0;
-        transform: translateY(28px) scale(0.96);
-        filter: blur(4px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-        filter: blur(0);
-      }
-    }
-  }
-  
-  /* ============================================================
-     TRACK PILL — breathing glow dot using a smoother easing curve
-     ============================================================ */
-  .track-pill .tag-dot {
-    animation: dot-breathe 2.4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
-  }
-  
-  @keyframes dot-breathe {
-    0%, 100% { transform: scale(1); filter: brightness(1); }
-    50%      { transform: scale(1.35); filter: brightness(1.4); }
-  }
-  
-  /* ============================================================
-     FOCUS-VISIBLE — accessible keyboard focus rings that match
-     the theme instead of the browser default
-     ============================================================ */
-  .btn:focus-visible,
-  .flow-card:focus-visible,
-  .track-pill:focus-visible {
-    outline: 2px solid #7ff2ff;
-    outline-offset: 3px;
-    border-radius: inherit;
-  }
-  
-  /* ============================================================
-     :has() — subtle section-level reaction when a flow card
-     is hovered, dims its sibling to draw focus
-     ============================================================ */
-  .hackathon-flow:has(.flow-card:hover) .flow-card:not(:hover) {
-    opacity: 0.55;
-    filter: saturate(0.7);
-    transform: scale(0.985);
-  }
-  
-  /* ============================================================
-     AMBIENT GRAIN TEXTURE — already applied on .about-hackathon
-     base rule above (radial-gradient dot pattern), combined with
-     the Ken-Burns photo layer (::before) and animated wash (::after).
-     ============================================================ */
+@supports (animation-timeline: view()) {
 
-  /* ============================================================
-     STAGGERED CASCADE — each card/pill/chip enters slightly after
-     its predecessor instead of all at once. Works as a genuine
-     on-load entrance (unlike the scroll-timeline reveal above,
-     which only fires once the element scrolls into view).
-     ============================================================ */
   .flow-card,
   .track-pill,
   .stat-chip {
-    animation: cascade-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation: fade-rise both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
   }
 
-  .hackathon-flow .flow-card:nth-child(1) { animation-delay: 0.05s; }
-  .hackathon-flow .flow-card:nth-child(2) { animation-delay: 0.18s; }
-
-  .hackathon-tracks .track-pill:nth-child(1) { animation-delay: 0.28s; }
-  .hackathon-tracks .track-pill:nth-child(2) { animation-delay: 0.36s; }
-  .hackathon-tracks .track-pill:nth-child(3) { animation-delay: 0.44s; }
-  .hackathon-tracks .track-pill:nth-child(4) { animation-delay: 0.52s; }
-
-  .about-stats .stat-chip:nth-child(1),
-  .hackathon-stats .stat-chip:nth-child(1) { animation-delay: 0.05s; }
-  .about-stats .stat-chip:nth-child(2),
-  .hackathon-stats .stat-chip:nth-child(2) { animation-delay: 0.13s; }
-  .about-stats .stat-chip:nth-child(3),
-  .hackathon-stats .stat-chip:nth-child(3) { animation-delay: 0.21s; }
-  .about-stats .stat-chip:nth-child(4),
-  .hackathon-stats .stat-chip:nth-child(4) { animation-delay: 0.29s; }
-
-  @keyframes cascade-in {
+  @keyframes fade-rise {
     from {
       opacity: 0;
-      transform: translateY(22px) scale(0.96);
-      filter: blur(3px);
+      transform: translateY(28px) scale(0.96);
+      filter: blur(4px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0) scale(1);
       filter: blur(0);
     }
   }
+}
 
-  /* ============================================================
+/* ============================================================
+     TRACK PILL — breathing glow dot using a smoother easing curve
+     ============================================================ */
+.track-pill .tag-dot {
+  animation: dot-breathe 2.4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@keyframes dot-breathe {
+
+  0%,
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+
+  50% {
+    transform: scale(1.35);
+    filter: brightness(1.4);
+  }
+}
+
+/* ============================================================
+     FOCUS-VISIBLE — accessible keyboard focus rings that match
+     the theme instead of the browser default
+     ============================================================ */
+.btn:focus-visible,
+.flow-card:focus-visible,
+.track-pill:focus-visible {
+  outline: 2px solid #7ff2ff;
+  outline-offset: 3px;
+  border-radius: inherit;
+}
+
+/* ============================================================
+     :has() — subtle section-level reaction when a flow card
+     is hovered, dims its sibling to draw focus
+     ============================================================ */
+.hackathon-flow:has(.flow-card:hover) .flow-card:not(:hover) {
+  opacity: 0.55;
+  filter: saturate(0.7);
+  transform: scale(0.985);
+}
+
+/* ============================================================
+     AMBIENT GRAIN TEXTURE — already applied on .about-hackathon
+     base rule above (radial-gradient dot pattern), combined with
+     the Ken-Burns photo layer (::before) and animated wash (::after).
+     ============================================================ */
+
+/* ============================================================
+     STAGGERED CASCADE — each card/pill/chip enters slightly after
+     its predecessor instead of all at once. Works as a genuine
+     on-load entrance (unlike the scroll-timeline reveal above,
+     which only fires once the element scrolls into view).
+     ============================================================ */
+.flow-card,
+.track-pill,
+.stat-chip {
+  animation: cascade-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hackathon-flow .flow-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.hackathon-flow .flow-card:nth-child(2) {
+  animation-delay: 0.18s;
+}
+
+.hackathon-tracks .track-pill:nth-child(1) {
+  animation-delay: 0.28s;
+}
+
+.hackathon-tracks .track-pill:nth-child(2) {
+  animation-delay: 0.36s;
+}
+
+.hackathon-tracks .track-pill:nth-child(3) {
+  animation-delay: 0.44s;
+}
+
+.hackathon-tracks .track-pill:nth-child(4) {
+  animation-delay: 0.52s;
+}
+
+.about-stats .stat-chip:nth-child(1),
+.hackathon-stats .stat-chip:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.about-stats .stat-chip:nth-child(2),
+.hackathon-stats .stat-chip:nth-child(2) {
+  animation-delay: 0.13s;
+}
+
+.about-stats .stat-chip:nth-child(3),
+.hackathon-stats .stat-chip:nth-child(3) {
+  animation-delay: 0.21s;
+}
+
+.about-stats .stat-chip:nth-child(4),
+.hackathon-stats .stat-chip:nth-child(4) {
+  animation-delay: 0.29s;
+}
+
+@keyframes cascade-in {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.96);
+    filter: blur(3px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* ============================================================
      FLOW CARD — subtle 3D tilt + light-follow sheen on hover
      (pure CSS, no JS: tilt direction is fixed rather than
      cursor-tracked, but reads as a deliberate "lift & tilt")
      ============================================================ */
-  .hackathon-flow {
-    perspective: 1200px;
-  }
+.hackathon-flow {
+  perspective: 1200px;
+}
 
-  .flow-card {
-    transform-style: preserve-3d;
-    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-                border-color 0.3s ease, box-shadow 0.3s ease;
+.flow-card {
+  transform-style: preserve-3d;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flow-card:hover {
+  transform: translateY(-8px) rotateX(4deg) rotateY(-3deg) scale(1.015);
+}
+
+/* ============================================================
+     BUTTON — animated sheen sweep across the primary CTA
+     ============================================================ */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%);
+  transform: skewX(-20deg);
+  transition: left 0.7s ease;
+  pointer-events: none;
+}
+
+.btn-primary:hover::after {
+  left: 130%;
+}
+
+/* ============================================================
+     MOTION SAFETY
+     ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+
+  .flow-card::after,
+  .stat-chip::after,
+  .track-pill .tag-dot,
+  .flow-card,
+  .track-pill,
+  .stat-chip,
+  .about-hackathon::before,
+  .about-hackathon::after,
+  .btn-primary::after {
+    animation: none !important;
+    transition: none !important;
   }
 
   .flow-card:hover {
-    transform: translateY(-8px) rotateX(4deg) rotateY(-3deg) scale(1.015);
+    transform: translateY(-6px);
   }
 
-  /* ============================================================
-     BUTTON — animated sheen sweep across the primary CTA
-     ============================================================ */
-  .btn-primary {
-    position: relative;
-    overflow: hidden;
-    isolation: isolate;
-  }
+  @supports (animation-timeline: view()) {
 
-  .btn-primary::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -75%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%);
-    transform: skewX(-20deg);
-    transition: left 0.7s ease;
-    pointer-events: none;
-  }
-
-  .btn-primary:hover::after {
-    left: 130%;
-  }
-  
-  /* ============================================================
-     MOTION SAFETY
-     ============================================================ */
-  @media (prefers-reduced-motion: reduce) {
-    .flow-card::after,
-    .stat-chip::after,
-    .track-pill .tag-dot,
     .flow-card,
     .track-pill,
-    .stat-chip,
-    .about-hackathon::before,
-    .about-hackathon::after,
-    .btn-primary::after {
-      animation: none !important;
-      transition: none !important;
-    }
-
-    .flow-card:hover {
-      transform: translateY(-6px);
-    }
-
-    @supports (animation-timeline: view()) {
-      .flow-card,
-      .track-pill,
-      .stat-chip {
-        opacity: 1;
-        transform: none;
-        filter: none;
-      }
+    .stat-chip {
+      opacity: 1;
+      transform: none;
+      filter: none;
     }
   }
+}

@@ -20,22 +20,22 @@
   /* ------------------------------------------------------------------------
      1. UTILS
      ------------------------------------------------------------------------ */
-  const lerp  = (a, b, t) => a + (b - a) * t;
+  const lerp = (a, b, t) => a + (b - a) * t;
   const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
   const mapRange = (v, inMin, inMax, outMin, outMax) =>
     outMin + ((v - inMin) * (outMax - outMin)) / (inMax - inMin);
 
   /** Simple critically-damped spring for smooth follow behaviour. */
   class Spring {
-    constructor(value = 0, stiffness = 0.12, damping = 0.78){
+    constructor(value = 0, stiffness = 0.12, damping = 0.78) {
       this.value = value;
       this.target = value;
       this.velocity = 0;
       this.stiffness = stiffness;
       this.damping = damping;
     }
-    set(target){ this.target = target; }
-    update(){
+    set(target) { this.target = target; }
+    update() {
       const force = (this.target - this.value) * this.stiffness;
       this.velocity = (this.velocity + force) * this.damping;
       this.value += this.velocity;
@@ -56,7 +56,7 @@
   /* ------------------------------------------------------------------------
      3. CUSTOM CURSOR
      ------------------------------------------------------------------------ */
-  function initCursor(){
+  function initCursor() {
     if (IS_TOUCH || REDUCE_MOTION) return;
 
     const dot = document.getElementById('cursorDot');
@@ -78,7 +78,7 @@
       el.addEventListener('mouseleave', () => glow.classList.remove('is-active'));
     });
 
-    function raf(){
+    function raf() {
       dotPos.x = lerp(dotPos.x, mouseX, 0.35);
       dotPos.y = lerp(dotPos.y, mouseY, 0.35);
       glowPos.x = lerp(glowPos.x, mouseX, 0.12);
@@ -95,7 +95,7 @@
   /* ------------------------------------------------------------------------
      4. THREE.JS BACKGROUND
      ------------------------------------------------------------------------ */
-  function initThreeBackground(){
+  function initThreeBackground() {
     const canvas = document.getElementById('webgl');
     if (!canvas || typeof THREE === 'undefined') return;
 
@@ -113,19 +113,19 @@
     const starLayers = [];
     const starLayerConfigs = LOW_POWER
       ? [
-          { count: 500, spread: 2200, size: 1.6, color: 0xf6f4ff },
-          { count: 220, spread: 1600, size: 2.4, color: 0xa855f7 }
-        ]
+        { count: 500, spread: 2200, size: 1.6, color: 0xf6f4ff },
+        { count: 220, spread: 1600, size: 2.4, color: 0xa855f7 }
+      ]
       : [
-          { count: 1100, spread: 2600, size: 1.4, color: 0xf6f4ff },
-          { count: 600,  spread: 1900, size: 2.2, color: 0xa855f7 },
-          { count: 350,  spread: 1300, size: 2.8, color: 0x38bdf8 }
-        ];
+        { count: 1100, spread: 2600, size: 1.4, color: 0xf6f4ff },
+        { count: 600, spread: 1900, size: 2.2, color: 0xa855f7 },
+        { count: 350, spread: 1300, size: 2.8, color: 0x38bdf8 }
+      ];
 
     starLayerConfigs.forEach((cfg, i) => {
       const positions = new Float32Array(cfg.count * 3);
       for (let p = 0; p < cfg.count; p++) {
-        positions[p * 3]     = (Math.random() - 0.5) * cfg.spread;
+        positions[p * 3] = (Math.random() - 0.5) * cfg.spread;
         positions[p * 3 + 1] = (Math.random() - 0.5) * cfg.spread;
         positions[p * 3 + 2] = (Math.random() - 0.5) * cfg.spread;
       }
@@ -164,7 +164,7 @@
       const ry = (Math.random() - 0.5) * 40;
       const rz = Math.sin(angle) * radius + (Math.random() - 0.5) * 60;
 
-      galaxyPos[i * 3]     = rx;
+      galaxyPos[i * 3] = rx;
       galaxyPos[i * 3 + 1] = ry;
       galaxyPos[i * 3 + 2] = rz;
 
@@ -190,7 +190,7 @@
     scene.add(galaxy);
 
     /* ---- Nebula: soft glowing sprites using a radial-gradient canvas texture ---- */
-    function makeGlowTexture(hex){
+    function makeGlowTexture(hex) {
       const c = document.createElement('canvas');
       c.width = c.height = 256;
       const ctx = c.getContext('2d');
@@ -234,7 +234,7 @@
     }, { passive: true });
 
     /* ---- Resize ---- */
-    function onResize(){
+    function onResize() {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
@@ -243,7 +243,7 @@
 
     /* ---- Render loop ---- */
     const clock = new THREE.Clock();
-    function animate(){
+    function animate() {
       const t = clock.getElapsedTime();
 
       currentRot.x = lerp(currentRot.x, targetRot.x, 0.03);
@@ -272,7 +272,7 @@
   /* ------------------------------------------------------------------------
      5. CARD CONTROLLER — tilt (spring), flip, shine, ambient particles
      ------------------------------------------------------------------------ */
-  function initCards(){
+  function initCards() {
     const cards = Array.from(document.querySelectorAll('[data-card]'));
 
     cards.forEach((card) => {
@@ -289,7 +289,7 @@
       /* --- ambient particles: generated once, animated via CSS --- */
       spawnParticles(particleHost, 10, getComputedStyle(card).getPropertyValue('--accent').trim());
 
-      function loop(){
+      function loop() {
         const cx = tiltXSpring.update();
         const cy = tiltYSpring.update();
         inner.style.setProperty('--tiltX', `${cx}deg`);
@@ -308,7 +308,7 @@
         }
       }
 
-      function requestLoop(){
+      function requestLoop() {
         if (!raf) raf = requestAnimationFrame(loop);
       }
 
@@ -338,7 +338,7 @@
         });
       }
 
-      function toggleFlip(){
+      function toggleFlip() {
         flipped = !flipped;
         inner.classList.toggle('is-flipped', flipped);
         tiltXSpring.set(0);
@@ -357,7 +357,7 @@
   }
 
   /** Creates small glowing dots that orbit a card using CSS keyframes with randomized paths. */
-  function spawnParticles(host, count, accentColor){
+  function spawnParticles(host, count, accentColor) {
     if (!host || LOW_POWER) return;
     for (let i = 0; i < count; i++) {
       const p = document.createElement('span');
@@ -379,7 +379,7 @@
   /* ------------------------------------------------------------------------
      6. CONSTELLATION SVG — connects card centers, draws in on scroll
      ------------------------------------------------------------------------ */
-  function initConstellation(){
+  function initConstellation() {
     const svg = document.getElementById('constellationSvg');
     const stage = document.getElementById('constellationStage');
     const linesGroup = document.getElementById('linesGroup');
@@ -389,7 +389,7 @@
 
     let paths = [];
 
-    function build(){
+    function build() {
       if (window.innerWidth <= 1080) return; // hidden on tablet/mobile via CSS too
       linesGroup.innerHTML = '';
       nodesGroup.innerHTML = '';
@@ -433,7 +433,7 @@
     }
 
     /** Draw progress tied to how far the stage has scrolled through the viewport. */
-    function updateDraw(){
+    function updateDraw() {
       const r = stage.getBoundingClientRect();
       const vh = window.innerHeight;
       const progress = clamp(mapRange(r.top, vh * 0.85, vh * 0.25, 0, 1), 0, 1);
@@ -455,7 +455,7 @@
   /* ------------------------------------------------------------------------
      7. MAGNETIC BUTTON + RIPPLE
      ------------------------------------------------------------------------ */
-  function initMagneticButtons(){
+  function initMagneticButtons() {
     document.querySelectorAll('[data-magnetic]').forEach((btn) => {
       if (!IS_TOUCH && !REDUCE_MOTION) {
         const strength = 0.35;
@@ -489,7 +489,7 @@
   /* ------------------------------------------------------------------------
      8. SCROLL REVEAL
      ------------------------------------------------------------------------ */
-  function initScrollReveal(){
+  function initScrollReveal() {
     const revealEls = Array.from(document.querySelectorAll('[data-reveal]'));
     const cardEls = Array.from(document.querySelectorAll('[data-card]'));
 
@@ -517,7 +517,7 @@
   /* ------------------------------------------------------------------------
      9. BOOT
      ------------------------------------------------------------------------ */
-  function boot(){
+  function boot() {
     initCursor();
     initThreeBackground();
     initCards();

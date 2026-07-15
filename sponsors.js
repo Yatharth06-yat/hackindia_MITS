@@ -14,9 +14,11 @@ gsap.registerPlugin(ScrollTrigger);
    0. SPONSOR DATA
    ============================================================ */
 const SPONSORS = [
-  { name: "Interview Buddy",    cat: "Carrier & AI",        level: "Platinum Partner", tech: "Azure AI Platform",
-    desc: "Helping HackIndia participants sharpen their interview skills through AI-powered mock interviews, expert feedback, and career preparation resources for internships and full-time opportunities.", url: "https://www.interviewbuddy.net" },
-//  ts and MVPs with hosting credits on simple, developer-friendly infrastructure.", url: "https://digitalocean.com" },
+  {
+    name: "Interview Buddy", cat: "Carrier & AI", level: "Platinum Partner", tech: "Azure AI Platform",
+    desc: "Helping HackIndia participants sharpen their interview skills through AI-powered mock interviews, expert feedback, and career preparation resources for internships and full-time opportunities.", url: "https://www.interviewbuddy.net"
+  },
+  //  ts and MVPs with hosting credits on simple, developer-friendly infrastructure.", url: "https://digitalocean.com" },
 ];
 
 /* a small rotating set of geometric glyph paths so every card feels bespoke,
@@ -81,13 +83,13 @@ class SpaceScene {
     const layerConfigs = [
       { count: 3200, spread: 2600, size: 1.4, color: 0xbfb2ff },
       { count: 1800, spread: 1800, size: 2.0, color: 0x8fd3ff },
-      { count: 900,  spread: 1200, size: 2.8, color: 0xffffff },
+      { count: 900, spread: 1200, size: 2.8, color: 0xffffff },
     ];
 
     layerConfigs.forEach((cfg) => {
       const positions = new Float32Array(cfg.count * 3);
       for (let i = 0; i < cfg.count; i++) {
-        positions[i * 3]     = (Math.random() - 0.5) * cfg.spread;
+        positions[i * 3] = (Math.random() - 0.5) * cfg.spread;
         positions[i * 3 + 1] = (Math.random() - 0.5) * cfg.spread;
         positions[i * 3 + 2] = (Math.random() - 0.5) * cfg.spread - 200;
       }
@@ -115,7 +117,7 @@ class SpaceScene {
     const count = 500;
     const positions = new Float32Array(count * 3);
     for (let i = 0; i < count; i++) {
-      positions[i * 3]     = (Math.random() - 0.5) * 900;
+      positions[i * 3] = (Math.random() - 0.5) * 900;
       positions[i * 3 + 1] = (Math.random() - 0.5) * 900;
       positions[i * 3 + 2] = (Math.random() - 0.5) * 600 + 100;
     }
@@ -150,12 +152,12 @@ class SpaceScene {
     };
 
     const texPurple = makeCloudTexture("rgba(139,92,246,0.55)", "rgba(76,29,149,0.18)");
-    const texBlue   = makeCloudTexture("rgba(59,130,246,0.5)", "rgba(29,78,216,0.15)");
+    const texBlue = makeCloudTexture("rgba(59,130,246,0.5)", "rgba(29,78,216,0.15)");
 
     this.nebulae = [];
     const placements = [
       { tex: texPurple, pos: [-500, 180, -900], scale: 1400 },
-      { tex: texBlue,   pos: [520, -160, -1100], scale: 1600 },
+      { tex: texBlue, pos: [520, -160, -1100], scale: 1600 },
       { tex: texPurple, pos: [0, 400, -1400], scale: 1800 },
     ];
 

@@ -18,14 +18,14 @@
      1. CHECKPOINT DATA
   ------------------------------------------------------- */
   const CHECKPOINTS = [
-    { title: 'Registration',    date: 'Aug 01', icon: '◆', desc: 'Sign up your team and stake your claim on the road ahead.',       schedule: 'Opens Aug 01 · Closes Aug 14',       resources: 'Team portal · Rulebook v1' },
-    { title: 'Idea Submission', date: 'Aug 18', icon: '✦', desc: 'Pitch your concept in 300 words. Clarity beats complexity.',       schedule: 'Deadline Aug 18, 11:59 PM',          resources: 'Submission template · Judging rubric' },
-    { title: 'Mentorship',      date: 'Aug 25', icon: '◈', desc: '1:1 sessions with industry mentors to sharpen your build.',        schedule: 'Aug 25 – Sep 05 · rolling slots',    resources: 'Mentor directory · Booking calendar' },
-    { title: 'Prototype',       date: 'Sep 10', icon: '◇', desc: 'Ship a working prototype. Rough edges are welcome.',               schedule: 'Due Sep 10, 6:00 PM',                resources: 'Starter repo · Deployment guide' },
-    { title: 'Hackathon',       date: 'Sep 20', icon: '⬡', desc: '36 hours. One room. Everything you\'ve got.',                     schedule: 'Sep 20, 9 AM – Sep 21, 9 PM',        resources: 'Venue map · Wi-Fi + power layout' },
-    { title: 'Presentation',    date: 'Sep 22', icon: '▲', desc: 'Five minutes on stage to make the case for your build.',           schedule: 'Sep 22 · Slots assigned by team ID', resources: 'Slide template · Demo checklist' },
-    { title: 'Judging',         date: 'Sep 23', icon: '◉', desc: 'A panel of judges scores impact, execution, and polish.',          schedule: 'Sep 23, 10 AM – 4 PM',              resources: 'Scoring criteria · Judge bios' },
-    { title: 'Grand Finale',    date: 'Sep 24', icon: '★', desc: 'Winners announced. Prizes awarded. The road ends here.',           schedule: 'Sep 24, 6:00 PM onward',            resources: 'Livestream link · Prize breakdown' },
+    { title: 'Registration', date: 'Aug 01', icon: '◆', desc: 'Sign up your team and stake your claim on the road ahead.', schedule: 'Opens Aug 01 · Closes Aug 14', resources: 'Team portal · Rulebook v1' },
+    { title: 'Idea Submission', date: 'Aug 18', icon: '✦', desc: 'Pitch your concept in 300 words. Clarity beats complexity.', schedule: 'Deadline Aug 18, 11:59 PM', resources: 'Submission template · Judging rubric' },
+    { title: 'Mentorship', date: 'Aug 25', icon: '◈', desc: '1:1 sessions with industry mentors to sharpen your build.', schedule: 'Aug 25 – Sep 05 · rolling slots', resources: 'Mentor directory · Booking calendar' },
+    { title: 'Prototype', date: 'Sep 10', icon: '◇', desc: 'Ship a working prototype. Rough edges are welcome.', schedule: 'Due Sep 10, 6:00 PM', resources: 'Starter repo · Deployment guide' },
+    { title: 'Hackathon', date: 'Sep 20', icon: '⬡', desc: '36 hours. One room. Everything you\'ve got.', schedule: 'Sep 20, 9 AM – Sep 21, 9 PM', resources: 'Venue map · Wi-Fi + power layout' },
+    { title: 'Presentation', date: 'Sep 22', icon: '▲', desc: 'Five minutes on stage to make the case for your build.', schedule: 'Sep 22 · Slots assigned by team ID', resources: 'Slide template · Demo checklist' },
+    { title: 'Judging', date: 'Sep 23', icon: '◉', desc: 'A panel of judges scores impact, execution, and polish.', schedule: 'Sep 23, 10 AM – 4 PM', resources: 'Scoring criteria · Judge bios' },
+    { title: 'Grand Finale', date: 'Sep 24', icon: '★', desc: 'Winners announced. Prizes awarded. The road ends here.', schedule: 'Sep 24, 6:00 PM onward', resources: 'Livestream link · Prize breakdown' },
   ];
 
   /* -------------------------------------------------------
@@ -55,7 +55,7 @@
       const geo = new THREE.BufferGeometry();
       const pos = new Float32Array(count * 3);
       for (let i = 0; i < count; i++) {
-        pos[i * 3]     = (Math.random() - 0.5) * spread;
+        pos[i * 3] = (Math.random() - 0.5) * spread;
         pos[i * 3 + 1] = (Math.random() - 0.5) * spread;
         pos[i * 3 + 2] = (Math.random() - 0.5) * spread;
       }
@@ -66,9 +66,9 @@
       }));
     }
 
-    const starsFar  = makeStars(1200, 1800, 1.4, 0xffffff, 0.55);
-    const starsMid  = makeStars(500,  1200, 2.0, 0x8b5cf6, 0.60);
-    const starsNear = makeStars(180,  800,  2.6, 0x33d6ff, 0.70);
+    const starsFar = makeStars(1200, 1800, 1.4, 0xffffff, 0.55);
+    const starsMid = makeStars(500, 1200, 2.0, 0x8b5cf6, 0.60);
+    const starsNear = makeStars(180, 800, 2.6, 0x33d6ff, 0.70);
     scene.add(starsFar, starsMid, starsNear);
 
     const nebulaGeo = new THREE.SphereGeometry(1, 8, 8);
@@ -102,8 +102,8 @@
     const clock = new THREE.Clock();
     function tick() {
       const t = clock.getElapsedTime();
-      starsFar.rotation.y  = t * 0.005;
-      starsMid.rotation.y  = t * 0.010 + scrollFrac * 0.6;
+      starsFar.rotation.y = t * 0.005;
+      starsMid.rotation.y = t * 0.010 + scrollFrac * 0.6;
       starsNear.rotation.y = t * 0.018 + scrollFrac * 1.1;
       camera.position.x += (mx * 40 - camera.position.x) * 0.03;
       camera.position.y += (-my * 30 - camera.position.y) * 0.03;
@@ -120,17 +120,17 @@
   /* -------------------------------------------------------
      3. ENERGY ROAD — SVG Bezier path + checkpoint nodes
   ------------------------------------------------------- */
-  const svg        = document.getElementById('road-svg');
+  const svg = document.getElementById('road-svg');
   const nodesLayer = document.getElementById('nodes-layer');
-  const tlWrap     = document.getElementById('timeline-wrap');
-  const traveler   = document.getElementById('traveler');
+  const tlWrap = document.getElementById('timeline-wrap');
+  const traveler = document.getElementById('traveler');
 
   if (!svg || !nodesLayer || !tlWrap || !traveler) return;
 
-  const VB_W      = 1000;
+  const VB_W = 1000;
   const SECTION_H = 620;
-  const TOP_PAD   = 160;
-  const BOT_PAD   = 160;
+  const TOP_PAD = 160;
+  const BOT_PAD = 160;
 
   let points = [], pathEl, pathLen = 0;
 
@@ -159,9 +159,9 @@
       <path class="road-glow" d="${d}"></path>
       <path class="road-fill" d="${d}" id="road-fill-path"></path>
     `;
-    pathEl  = document.getElementById('road-fill-path');
+    pathEl = document.getElementById('road-fill-path');
     pathLen = pathEl.getTotalLength();
-    pathEl.style.strokeDasharray  = pathLen;
+    pathEl.style.strokeDasharray = pathLen;
     pathEl.style.strokeDashoffset = pathLen;
   }
 
@@ -169,11 +169,11 @@
     nodesLayer.innerHTML = '';
     points.forEach((p, i) => {
       const side = i % 2 === 0 ? 'align-left' : 'align-right';
-      const el   = document.createElement('div');
-      el.className    = `node ${side} state-upcoming`;
-      el.style.left   = (p.x / VB_W * 100) + '%';
-      el.style.top    = p.y + 'px';
-      el.tabIndex     = 0;
+      const el = document.createElement('div');
+      el.className = `node ${side} state-upcoming`;
+      el.style.left = (p.x / VB_W * 100) + '%';
+      el.style.top = p.y + 'px';
+      el.tabIndex = 0;
       el.dataset.index = i;
       el.innerHTML = `
         <div class="node-medal">
@@ -222,7 +222,7 @@
       pathEl.style.strokeDashoffset = pathLen * (1 - p);
 
       // Move traveler along the path
-      const pt   = pathEl.getPointAtLength(pathLen * p);
+      const pt = pathEl.getPointAtLength(pathLen * p);
       const xPct = (pt.x / VB_W) * tlWrap.getBoundingClientRect().width;
       traveler.style.transform = `translate(${xPct}px, ${pt.y}px)`;
 
@@ -230,9 +230,9 @@
       Array.from(nodesLayer.children).forEach((node, i) => {
         const nodeP = points[i].y / (TOP_PAD + (points.length - 1) * SECTION_H);
         node.classList.remove('state-upcoming', 'state-current', 'state-completed');
-        if      (p > nodeP + 0.03) node.classList.add('state-completed');
+        if (p > nodeP + 0.03) node.classList.add('state-completed');
         else if (p > nodeP - 0.06) node.classList.add('state-current');
-        else                       node.classList.add('state-upcoming');
+        else node.classList.add('state-upcoming');
       });
     }
   });
@@ -283,10 +283,10 @@
 
   function openModal(i) {
     const cp = CHECKPOINTS[i];
-    document.getElementById('modal-num').textContent      = String(i + 1).padStart(2, '00');
-    document.getElementById('modal-title').textContent    = cp.title;
-    document.getElementById('modal-date').textContent     = cp.date;
-    document.getElementById('modal-desc').textContent     = cp.desc;
+    document.getElementById('modal-num').textContent = String(i + 1).padStart(2, '00');
+    document.getElementById('modal-title').textContent = cp.title;
+    document.getElementById('modal-date').textContent = cp.date;
+    document.getElementById('modal-desc').textContent = cp.desc;
     document.getElementById('modal-schedule').textContent = cp.schedule;
     document.getElementById('modal-resources').textContent = cp.resources;
     overlay.classList.add('open');

@@ -426,9 +426,8 @@
       const rect = btn.getBoundingClientRect();
       const x = e.clientX - rect.left - rect.width / 2;
       const y = e.clientY - rect.top - rect.height / 2;
-      btn.style.transform = `translate(${(x / rect.width) * strength}px, ${
-        (y / rect.height) * strength
-      }px)`;
+      btn.style.transform = `translate(${(x / rect.width) * strength}px, ${(y / rect.height) * strength
+        }px)`;
     });
     btn.addEventListener("mouseleave", () => {
       btn.style.transform = "translate(0,0)";
