@@ -14,30 +14,9 @@ gsap.registerPlugin(ScrollTrigger);
    0. SPONSOR DATA
    ============================================================ */
 const SPONSORS = [
-  { name: "Microsoft",    cat: "Cloud & AI",        level: "Platinum Partner", tech: "Azure AI Platform",
-    desc: "Powering HackIndia's infrastructure with Azure cloud compute, AI tooling, and developer credits for every team.", url: "https://microsoft.com" },
-  { name: "Google",       cat: "Cloud & Search",     level: "Platinum Partner", tech: "Google Cloud Platform",
-    desc: "Providing GCP credits, Gemini API access, and mentorship from Google Developer Experts to all participants.", url: "https://google.com" },
-  { name: "AWS",          cat: "Cloud Infra",        level: "Gold Partner", tech: "Amazon Web Services",
-    desc: "Delivering scalable cloud infrastructure and hands-on architecture workshops throughout the hackathon.", url: "https://aws.amazon.com" },
-  { name: "GitHub",       cat: "DevOps",             level: "Gold Partner", tech: "GitHub Copilot & Actions",
-    desc: "Fueling every commit with Copilot access, Actions minutes, and a dedicated open-source track for builders.", url: "https://github.com" },
-  { name: "Intel",        cat: "Hardware & Silicon", level: "Gold Partner", tech: "Intel oneAPI",
-    desc: "Bringing edge-AI hardware kits and oneAPI optimization support to the hardware innovation track.", url: "https://intel.com" },
-  { name: "Polygon",      cat: "Web3 & Blockchain",  level: "Silver Partner", tech: "Polygon zkEVM",
-    desc: "Sponsoring the Web3 track with zkEVM tooling, gas credits, and a dedicated bounty pool for on-chain builds.", url: "https://polygon.technology" },
-  { name: "Vercel",       cat: "Deployment",         level: "Silver Partner", tech: "Vercel Edge Network",
-    desc: "Giving every team instant, zero-config deployment on the Edge Network with generous free-tier limits.", url: "https://vercel.com" },
-  { name: "NVIDIA",       cat: "AI Compute",         level: "Platinum Partner", tech: "CUDA & RTX GPUs",
-    desc: "Powering the AI/ML track with GPU compute grants and access to NVIDIA's deep learning frameworks.", url: "https://nvidia.com" },
-  { name: "OpenAI",       cat: "Generative AI",      level: "Gold Partner", tech: "GPT & Realtime API",
-    desc: "Providing API credits and technical mentors for teams building on the latest generative AI models.", url: "https://openai.com" },
-  { name: "Cloudflare",   cat: "Edge & Security",    level: "Silver Partner", tech: "Workers & R2",
-    desc: "Securing and accelerating every submission with Workers, R2 storage, and free DDoS protection.", url: "https://cloudflare.com" },
-  { name: "MongoDB",      cat: "Database",           level: "Silver Partner", tech: "Atlas Cloud Database",
-    desc: "Offering free Atlas clusters and schema-design office hours to every registered team.", url: "https://mongodb.com" },
-  { name: "DigitalOcean", cat: "Cloud Hosting",      level: "Community Partner", tech: "App Platform & Droplets",
-    desc: "Fueling side-projects and MVPs with hosting credits on simple, developer-friendly infrastructure.", url: "https://digitalocean.com" },
+  { name: "Interview Buddy",    cat: "Cloud & AI",        level: "Platinum Partner", tech: "Azure AI Platform",
+    desc: "Helping HackIndia participants sharpen their interview skills through AI-powered mock interviews, expert feedback, and career preparation resources for internships and full-time opportunities.", url: "https://www.interviewbuddy.net" },
+//  ts and MVPs with hosting credits on simple, developer-friendly infrastructure.", url: "https://digitalocean.com" },
 ];
 
 /* a small rotating set of geometric glyph paths so every card feels bespoke,
