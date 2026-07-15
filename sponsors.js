@@ -14,7 +14,7 @@ gsap.registerPlugin(ScrollTrigger);
    0. SPONSOR DATA
    ============================================================ */
 const SPONSORS = [
-  { name: "Interview Buddy",    cat: "Cloud & AI",        level: "Platinum Partner", tech: "Azure AI Platform",
+  { name: "Interview Buddy",    cat: "Carrier & AI",        level: "Platinum Partner", tech: "Azure AI Platform",
     desc: "Helping HackIndia participants sharpen their interview skills through AI-powered mock interviews, expert feedback, and career preparation resources for internships and full-time opportunities.", url: "https://www.interviewbuddy.net" },
 //  ts and MVPs with hosting credits on simple, developer-friendly infrastructure.", url: "https://digitalocean.com" },
 ];
