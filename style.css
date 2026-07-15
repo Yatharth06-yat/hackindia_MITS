@@ -106,6 +106,19 @@ body {
   transform: rotate(45deg);
 }
 
+.brand-logo-img {
+  height: 44px;
+  width: auto;
+  border-radius: 10px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 0 8px rgba(155, 107, 255, 0.5));
+  transition: filter 0.3s ease;
+}
+.brand:hover .brand-logo-img {
+  filter: drop-shadow(0 0 14px rgba(67, 224, 255, 0.6));
+}
+
 .main-nav {
   display: flex;
   align-items: center;

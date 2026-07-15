@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HackIndia — The Journey</title>
+  <title>HackSynapse — The Journey</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
@@ -23,13 +23,13 @@
   <header class="site-header">
     <div class="nav-wrap">
       <a class="brand" href="home.html">
-        <span class="brand-mark"></span>
-        HackIndia
+        <img src="assets/logo.jpg" alt="HackSynapse Logo" class="brand-logo-img" />
       </a>
+
 
       <nav class="main-nav" aria-label="Primary">
         <a href="home.html">Home</a>
-        <a href="about.html" >About MITS</a>
+        <a href="about.html">About MITS</a>
         <a href="track.html">Tracks</a>
         <a href="time.html">Timeline</a>
         <a href="round.html">Rounds</a>
@@ -37,8 +37,6 @@
         <a href="sponsors.html">Sponsors</a>
         <a href="f&q.html">FAQ</a>
         <a href="contact.html">Contact</a>
-        <a href="devloper.html">Developer</a>
-
       </nav>
 
       <a href="#register" class="btn btn-primary nav-cta">Register Now</a>
@@ -61,9 +59,9 @@
 
   <!-- time-HERO -->
   <section class="time-hero">
-    <div class="time-hero-eyebrow">HACKINDIA · SEASON 05</div>
+    <div class="time-hero-eyebrow">HACKINDIA · HACKSYNAPSE</div>
     <h1 class="time-hero-title">THE PATH TO<br><span>GRAND FINALE</span></h1>
-    <p class="time-hero-sub">Eight checkpoints. One energy road. Scroll to walk it.</p>
+    <p class="time-hero-sub">Five phases. One grand offline finale. Scroll to walk the path.</p>
     <div class="scroll-cue">
       <span>SCROLL</span>
       <div class="scroll-line"></div>
@@ -89,7 +87,7 @@
       <span>VIEW FULL TIMELINE</span>
       <div class="cta-energy"></div>
     </button>
-    <p class="footer-note">HackIndia · Registrations close soon</p>
+    <p class="footer-note">HackSynapse · Registrations open 15 July 2026</p>
   </section>
 
   <!-- MODAL -->
@@ -98,7 +96,7 @@
       <button class="modal-close" id="modal-close">&times;</button>
       <div class="modal-num" id="modal-num">01</div>
       <h3 class="modal-title" id="modal-title">Registration</h3>
-      <div class="modal-date" id="modal-date">Aug 01</div>
+      <div class="modal-date" id="modal-date">Jul 15</div>
       <p class="modal-desc" id="modal-desc"></p>
       <div class="modal-section">
         <h4>Schedule</h4>
@@ -120,41 +118,6 @@
     <canvas id="footer-canvas"></canvas>
     <div class="footer-fog"></div>
 
-    <!-- Astronaut -->
-    <div class="astronaut" id="astronaut">
-      <div class="astro-hologram" id="astroMessage">Join our community →</div>
-      <svg viewBox="0 0 120 150" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="suitGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#f4f7ff" />
-            <stop offset="100%" stop-color="#c7d0ea" />
-          </linearGradient>
-          <radialGradient id="glassGrad" cx="35%" cy="30%" r="70%">
-            <stop offset="0%" stop-color="#7ff2ff" />
-            <stop offset="60%" stop-color="#2f8fd9" />
-            <stop offset="100%" stop-color="#123a5c" />
-          </radialGradient>
-        </defs>
-        <rect x="38" y="55" width="44" height="55" rx="12" fill="#9aa6c9" />
-        <ellipse id="thrusterL" cx="42" cy="118" rx="5" ry="10" fill="#43e0ff" opacity="0.8" />
-        <ellipse id="thrusterR" cx="78" cy="118" rx="5" ry="10" fill="#43e0ff" opacity="0.8" />
-        <ellipse cx="60" cy="88" rx="30" ry="38" fill="url(#suitGrad)" />
-        <rect x="46" y="72" width="28" height="20" rx="5" fill="#1b2338" opacity="0.85" />
-        <circle cx="52" cy="82" r="2.4" fill="#43e0ff" />
-        <circle cx="60" cy="82" r="2.4" fill="#9b6bff" />
-        <circle cx="68" cy="82" r="2.4" fill="#3d7dff" />
-        <ellipse cx="26" cy="80" rx="10" ry="22" fill="url(#suitGrad)" />
-        <ellipse cx="94" cy="80" rx="10" ry="22" fill="url(#suitGrad)" />
-        <ellipse cx="48" cy="128" rx="11" ry="20" fill="url(#suitGrad)" />
-        <ellipse cx="72" cy="128" rx="11" ry="20" fill="url(#suitGrad)" />
-        <circle cx="60" cy="38" r="26" fill="url(#suitGrad)" />
-        <circle class="astro-glass" cx="60" cy="38" r="19" fill="url(#glassGrad)" />
-        <ellipse cx="52" cy="30" rx="6" ry="4" fill="#ffffff" opacity="0.55" />
-        <line x1="60" y1="12" x2="60" y2="4" stroke="#9aa6c9" stroke-width="2" />
-        <circle cx="60" cy="3" r="2.5" fill="#43e0ff" />
-      </svg>
-    </div>
-
     <div class="footer-inner">
 
       <div class="footer-grid">
@@ -166,42 +129,43 @@
             day.</p>
 
           <div class="socials">
-            <button class="social-btn" data-magnetic aria-label="Discord">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M20.3 4.4A19.7 19.7 0 0 0 15.6 3l-.3.6a14 14 0 0 1 4 1.5c-2.7-1.3-5.4-1.3-8-1.3s-5.3 0-8 1.3a14 14 0 0 1 4.1-1.5L7 3a19.7 19.7 0 0 0-4.7 1.4C.2 8.4-.4 12.3.2 16.2A20 20 0 0 0 6 18.6l.9-1.5a12.8 12.8 0 0 1-2-1c.2-.1.3-.2.5-.3 3.9 1.8 8.1 1.8 12 0l.5.3a12.8 12.8 0 0 1-2 1l.9 1.5a20 20 0 0 0 5.8-2.4c.7-4.5-.4-8.4-2.5-11.8zM8.5 14c-.9 0-1.6-.8-1.6-1.8S7.6 10.4 8.5 10.4s1.7.8 1.6 1.8c0 1-.7 1.8-1.6 1.8zm7 0c-.9 0-1.6-.8-1.6-1.8s.7-1.8 1.6-1.8 1.7.8 1.6 1.8c0 1-.7 1.8-1.6 1.8z" />
-              </svg>
-            </button>
-            <button class="social-btn" data-magnetic aria-label="GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M12 2a10 10 0 0 0-3.16 19.5c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.28.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.9-1.3 2.74-1.02 2.74-1.02.56 1.37.2 2.4.1 2.65.65.7 1.03 1.6 1.03 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z" />
-              </svg>
-            </button>
-            <button class="social-btn" data-magnetic aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zm7 0h3.8v1.7h.05c.53-.95 1.83-1.96 3.77-1.96 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.97V21h-4z" />
-              </svg>
-            </button>
-            <button class="social-btn" data-magnetic aria-label="Instagram">
+            <!-- Instagram IAS -->
+            <a class="social-btn social-labeled" data-magnetic aria-label="IEEE IAS Instagram"
+              href="https://www.instagram.com/ieee_ias_mits?igsh=czRjZGJhbm1xczFl" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path
                   d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 2 .25 2.4.42.6.24 1.05.53 1.5 1 .47.44.76.9 1 1.5.18.4.36 1.2.42 2.4.07 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.25 2-.42 2.4-.24.6-.53 1.05-1 1.5-.44.47-.9.76-1.5 1-.4.18-1.2.36-2.4.42-1.3.07-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-2-.25-2.4-.42-.6-.24-1.05-.53-1.5-1-.47-.44-.76-.9-1-1.5-.18-.4-.36-1.2-.42-2.4-.07-1.3-.07-1.7-.07-4.9s0-3.6.07-4.9c.06-1.2.25-2 .42-2.4.24-.6.53-1.05 1-1.5.44-.47.9-.76 1.5-1 .4-.18 1.2-.36 2.4-.42C8.4 2.2 8.8 2.2 12 2.2zm0 3.15a6.65 6.65 0 1 0 0 13.3 6.65 6.65 0 0 0 0-13.3zm0 11a4.35 4.35 0 1 1 0-8.7 4.35 4.35 0 0 1 0 8.7zm6.9-11.25a1.56 1.56 0 1 1-3.12 0 1.56 1.56 0 0 1 3.12 0z" />
               </svg>
-            </button>
-            <button class="social-btn" data-magnetic aria-label="X">
+              <span class="social-tag">IAS</span>
+            </a>
+            <!-- Instagram RAS -->
+            <a class="social-btn social-labeled" data-magnetic aria-label="IEEE RAS Instagram"
+              href="https://www.instagram.com/ieee_ras_mits?igsh=MWJsYWc0NTFkcWJ5Nw==" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path
-                  d="M18.9 2H22l-7.7 8.8L23 22h-6.9l-5.4-6.9L4.6 22H1.5l8.2-9.4L1 2h7l4.9 6.3L18.9 2zM17.6 20h1.9L7.5 3.9H5.4L17.6 20z" />
+                  d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 2 .25 2.4.42.6.24 1.05.53 1.5 1 .47.44.76.9 1 1.5.18.4.36 1.2.42 2.4.07 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.25 2-.42 2.4-.24.6-.53 1.05-1 1.5-.44.47-.9.76-1.5 1-.4.18-1.2.36-2.4.42-1.3.07-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-2-.25-2.4-.42-.6-.24-1.05-.53-1.5-1-.47-.44-.76-.9-1-1.5-.18-.4-.36-1.2-.42-2.4-.07-1.3-.07-1.7-.07-4.9s0-3.6.07-4.9c.06-1.2.25-2 .42-2.4.24-.6.53-1.05 1-1.5.44-.47.9-.76 1.5-1 .4-.18 1.2-.36 2.4-.42C8.4 2.2 8.8 2.2 12 2.2zm0 3.15a6.65 6.65 0 1 0 0 13.3 6.65 6.65 0 0 0 0-13.3zm0 11a4.35 4.35 0 1 1 0-8.7 4.35 4.35 0 0 1 0 8.7zm6.9-11.25a1.56 1.56 0 1 1-3.12 0 1.56 1.56 0 0 1 3.12 0z" />
               </svg>
-            </button>
-            <button class="social-btn" data-magnetic aria-label="YouTube">
+              <span class="social-tag">RAS</span>
+            </a>
+            <!-- LinkedIn IAS -->
+            <a class="social-btn social-labeled" data-magnetic aria-label="IEEE IAS LinkedIn"
+              href="https://www.linkedin.com/company/ieee-industry-applications-society-ias-student-branch-chapter-mits/"
+              target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path
-                  d="M23 12s0-3.4-.44-5a2.9 2.9 0 0 0-2-2C18.9 4.5 12 4.5 12 4.5s-6.9 0-8.56.5a2.9 2.9 0 0 0-2 2C1 8.6 1 12 1 12s0 3.4.44 5a2.9 2.9 0 0 0 2 2C5.1 19.5 12 19.5 12 19.5s6.9 0 8.56-.5a2.9 2.9 0 0 0 2-2C23 15.4 23 12 23 12zM9.8 15.5v-7l6 3.5-6 3.5z" />
+                  d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zm7 0h3.8v1.7h.05c.53-.95 1.83-1.96 3.77-1.96 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.97V21h-4z" />
               </svg>
-            </button>
+              <span class="social-tag">IAS</span>
+            </a>
+            <!-- LinkedIn RAS -->
+            <a class="social-btn social-labeled" data-magnetic aria-label="IEEE RAS LinkedIn"
+              href="https://www.linkedin.com/company/ieee-ras-student-branch-mits/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zm7 0h3.8v1.7h.05c.53-.95 1.83-1.96 3.77-1.96 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.97V21h-4z" />
+              </svg>
+              <span class="social-tag">RAS</span>
+            </a>
           </div>
         </div>
 
@@ -233,9 +197,9 @@
         <div class="reveal-up">
           <div class="col-title"><span class="bar"></span>Quick Links</div>
           <div class="links-grid">
-            <a href="index.html#about" class="footer-link">About</a>
+            <a href="about.html" class="footer-link">About</a>
             <a href="time.html" class="footer-link">Timeline</a>
-            <a href="index.html#tracks" class="footer-link">Themes</a>
+            <a href="track.html" class="footer-link">Themes</a>
             <a href="judge.html" class="footer-link">Judges</a>
             <a href="sponsors.html" class="footer-link">Sponsors</a>
             <a href="#" class="footer-link">Gallery</a>
@@ -251,7 +215,6 @@
 
       <div class="bottom-bar reveal-up">
         <span>© 2026 HackIndia. All systems nominal.</span>
-        <span class="made-with">Made with <span class="heart">❤</span> by builders, for builders</span>
         <button class="rocket-btn" id="rocketBtn" aria-label="Back to top">
           <span class="rocket-trail"></span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"

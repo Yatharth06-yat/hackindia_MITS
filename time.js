@@ -13,60 +13,39 @@
   
     var CHECKPOINTS = [
       {
-        title: 'Registration Opens',
+        title: 'Registrations Open',
+        date: 'Jul 13',
+        desc: 'Team registrations will remain open throughout this period. Teams must consist of 3–4 members.',
+        schedule: '13 July 2026 – 23 August 2026',
+        resources: 'Team registration portal, rulebook, hackathon brochure.'
+      },
+      {
+        title: 'Round 1: Idea Submission',
         date: 'Aug 01',
-        desc: 'The gates open. Create your team profile and lock in your spot for Season 05 — solo builders welcome, teams up to four.',
-        schedule: 'Aug 01, 00:00 IST — Aug 09, 23:59 IST',
-        resources: 'Team dashboard, rulebook PDF, Discord invite link.'
+        desc: 'Registered teams must submit: Problem Statement & Solution PPT, a 1–2 minute video explaining the idea, GitHub repository link, LinkedIn profile of the Team Leader, and any additional relevant links (portfolio, pre-demo, etc.).',
+        schedule: '1 August 2026 – 25 August 2026 (Extended Deadline)',
+        resources: 'Submission portal, PPT template, judging rubric.'
       },
       {
-        title: 'Idea Submission',
-        date: 'Aug 10',
-        desc: 'Submit a one-page concept note. No code required yet — we want to know the problem you are chasing and why it matters.',
-        schedule: 'Opens Aug 10, closes Aug 17, 23:59 IST',
-        resources: 'Concept note template, track list, past winning ideas.'
-      },
-      {
-        title: 'Team Formation & Mentorship',
-        date: 'Aug 18',
-        desc: 'Solo entrants get matched into teams. Every team is paired with an industry mentor for the rest of the season.',
-        schedule: 'Matching runs Aug 18 – Aug 20',
-        resources: 'Mentor directory, teammate-matching form.'
-      },
-      {
-        title: 'Workshop Series I',
+        title: 'Round 1 Evaluation & Shortlisting',
         date: 'Aug 25',
-        desc: 'Three live sessions on system design, API scaffolding, and pitching. Recordings posted within 24 hours for every timezone.',
-        schedule: 'Aug 25, 27, 29 — 7:00 PM IST',
-        resources: 'Workshop recordings, starter repo, slide decks.'
+        desc: 'All submissions will be evaluated by the panel based on innovation, feasibility, impact, technical approach, and presentation. Shortlisted teams will qualify for the Offline Grand Finale.',
+        schedule: '25 August 2026 – 27 August 2026',
+        resources: 'Evaluation criteria document, shortlist announcement channel.'
       },
       {
-        title: 'Round 1 Judging',
+        title: 'Offline Participation Fee Window',
+        date: 'Aug 27',
+        desc: 'Shortlisted teams must confirm their participation by paying the Offline Hackathon Registration Fee of ₹1,100 per team. Only teams completing the payment within the specified window will be eligible to participate in the offline finale.',
+        schedule: '27 August 2026 – 2 September 2026',
+        resources: 'Payment portal, confirmation receipt, participation guidelines.'
+      },
+      {
+        title: 'Round 2: Offline Hackathon Finale',
         date: 'Sep 05',
-        desc: 'Push your first working prototype. Judges score on feasibility and problem clarity — this round filters the field to the top 40 teams.',
-        schedule: 'Submissions close Sep 05, 23:59 IST',
-        resources: 'Submission portal, judging rubric v2.'
-      },
-      {
-        title: 'Workshop Series II',
-        date: 'Sep 15',
-        desc: 'Deep dives on deployment, demo storytelling, and handling judge Q&A — built for teams heading into the final stretch.',
-        schedule: 'Sep 15, 17 — 7:00 PM IST',
-        resources: 'Demo-day checklist, deployment guide.'
-      },
-      {
-        title: 'Final Submission',
-        date: 'Sep 25',
-        desc: 'Full product, source code, and a three-minute demo video. This is the build the finalists will be judged on.',
-        schedule: 'Submissions close Sep 25, 23:59 IST',
-        resources: 'Final submission portal, video spec sheet.'
-      },
-      {
-        title: 'Grand Finale',
-        date: 'Oct 03',
-        desc: 'Top 12 teams pitch live to the judging panel. Winners announced the same evening — Season 05 closes here.',
-        schedule: 'Oct 03, 10:00 AM IST — doors, 6:00 PM IST — results',
-        resources: 'Venue details, livestream link, pitch-deck template.'
+        desc: 'The shortlisted teams will compete in a 24-hour offline hackathon at MITS-DU Gwalior, where they will build, refine, and present their solutions before an esteemed panel of judges. The event will feature mentoring sessions, networking opportunities, evaluation rounds, and the final prize distribution ceremony.',
+        schedule: '5 September 2026 – 6 September 2026',
+        resources: 'Venue details, schedule booklet, mentor directory, prize structure.'
       }
     ];
   

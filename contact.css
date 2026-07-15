@@ -392,3 +392,109 @@ body{
 @media (prefers-reduced-motion: reduce){
   *, *::before, *::after{ animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition: none !important; }
 }
+
+/* ===== Full-width card (no form) ===== */
+.card-inner--full {
+  display: block;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.card-inner--full .info {
+  max-width: 100%;
+}
+
+/* ===== Team contact section heading ===== */
+.contacts-heading {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--purple-glow);
+  margin: 1.6rem 0 1rem;
+}
+
+/* ===== Person cards grid ===== */
+.person-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .9rem;
+  margin-bottom: 1.8rem;
+}
+
+.person-card {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  padding: .85rem 1rem;
+  background: rgba(109, 63, 214, 0.08);
+  border: 1px solid rgba(150, 110, 255, 0.3);
+  border-radius: 14px;
+  text-decoration: none;
+  color: var(--text-hi);
+  cursor: pointer;
+  transition: background .25s ease, border-color .25s ease, transform .2s ease, box-shadow .25s ease;
+}
+.person-card:hover {
+  background: rgba(109, 63, 214, 0.22);
+  border-color: var(--purple-glow);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(178, 107, 255, 0.25);
+}
+
+.person-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--purple-1), var(--purple-2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(155, 92, 255, 0.4);
+}
+
+.person-info {
+  flex: 1;
+  min-width: 0;
+}
+.person-name {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: var(--text-hi);
+  line-height: 1.2;
+}
+.person-phone {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .78rem;
+  color: var(--purple-glow);
+  margin-top: 2px;
+}
+
+.person-call-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  color: var(--purple-glow);
+  opacity: .6;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.person-card:hover .person-call-icon {
+  opacity: 1;
+  transform: scale(1.15);
+}
+.person-call-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+}
+
+@media (max-width: 560px){
+  .person-cards { grid-template-columns: 1fr; }
+}
