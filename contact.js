@@ -1,4 +1,4 @@
-// ===== 3D tilt that follows the cursor =====
+
 const card = document.getElementById('card');
 const stage = document.querySelector('.stage');
 
