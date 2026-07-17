@@ -564,6 +564,76 @@ nav{display:flex;align-items:center;gap:clamp(18px,2.2vw,34px);}
         font-size:1.2rem;
     }
 }
+.note-popup{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:380px;
+    max-width:calc(100% - 30px);
+    padding:20px 22px;
+    background:rgba(12,18,35,.92);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(139,92,246,.4);
+    border-left:4px solid #8b5cf6;
+    border-radius:16px;
+    color:#fff;
+    z-index:99999;
+    box-shadow:0 15px 45px rgba(0,0,0,.45);
+    animation:popupSlide .6s ease;
+}
+
+.note-popup h3{
+    margin:0 0 12px;
+    color:#8b5cf6;
+    font-size:18px;
+}
+
+.note-popup p{
+    margin:8px 0;
+    font-size:14px;
+    line-height:1.7;
+    color:#d7d7d7;
+}
+
+.note-popup strong{
+    color:#fff;
+}
+
+.note-close{
+    position:absolute;
+    top:10px;
+    right:12px;
+    background:none;
+    border:none;
+    color:#bbb;
+    font-size:22px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.note-close:hover{
+    color:#fff;
+}
+
+@keyframes popupSlide{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:768px){
+    .note-popup{
+        right:15px;
+        left:15px;
+        width:auto;
+        bottom:15px;
+    }
+}
 </style>
 </head>
 <body>
@@ -669,6 +739,24 @@ nav{display:flex;align-items:center;gap:clamp(18px,2.2vw,34px);}
 <section class="hero" id="home">
   <div class="hero-grid">
     <div class="hero-left">
+      <!-- Registration Note Popup -->
+<div class="note-popup" id="notePopup">
+  <button class="note-close" onclick="document.getElementById('notePopup').style.display='none'">
+      &times;
+  </button>
+
+  <h3>📢 Important Note</h3>
+
+  <p>
+      <strong>Round 1:</strong> No registration fee is required.
+  </p>
+
+  <p>
+      The <strong>₹1,100 Offline Participation Fee</strong> is applicable
+      <strong>only to shortlisted teams qualifying for Round 2 (Offline Registration)</strong>
+      and is charged <strong>per team</strong>, not per participant.
+  </p>
+</div>
       <div class="eyebrow">36 Hours · Live · MITS Gwalior</div>
       <h1 class="hero-cinematic"><span class="hline">BUILD</span><span class="hline">THE</span><span class="hline hline-accent">FUTURE</span></h1>
       <div class="hero-brandmark">HackSynapse</div>
