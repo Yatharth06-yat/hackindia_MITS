@@ -15,10 +15,58 @@ gsap.registerPlugin(ScrollTrigger);
    ============================================================ */
 const SPONSORS = [
   {
-    name: "Interview Buddy", cat: "Carrier & AI", level: "Platinum Partner", tech: "Azure AI Platform",
-    desc: "Helping HackIndia participants sharpen their interview skills through AI-powered mock interviews, expert feedback, and career preparation resources for internships and full-time opportunities.", url: "https://www.interviewbuddy.net"
+    name: "Interview Buddy",
+    cat: "Career & AI",
+    level: "Platinum Partner",
+    tech: "AI Interview Platform",
+    desc: "Helping HackIndia participants sharpen their interview skills through AI-powered mock interviews, personalized feedback, and career preparation resources for internships and full-time opportunities.",
+    url: "https://www.interviewbuddy.net"
   },
-  //  ts and MVPs with hosting credits on simple, developer-friendly infrastructure.", url: "https://digitalocean.com" },
+
+  {
+    name: "Unstop",
+    cat: "Hiring & Competitions",
+    level: "Platform Partner",
+    tech: "Talent Discovery Platform",
+    desc: "India's leading platform connecting students with hackathons, competitions, internships, jobs, and skill-building opportunities while empowering organizations to discover top talent.",
+    url: "https://unstop.com"
+  },
+
+  {
+    name: "HackIndia",
+    cat: "Hackathon Platform",
+    level: "Title Partner",
+    tech: "Hackathon Management",
+    desc: "Powering HackSynapse with an end-to-end hackathon platform for registrations, team management, submissions, judging, communication, and participant engagement.",
+    url: "https://hackindia.xyz"
+  },
+
+  {
+    name: "CodeCrafter",
+    cat: "Developer Community",
+    level: "Community Partner",
+    tech: "Learning & Development",
+    desc: "Supporting developers through technical learning, coding resources, community initiatives, and opportunities that help participants build practical skills and grow as software engineers.",
+    url: "https://codecrafter.in"
+  },
+
+  {
+    name: "Bindu",
+    cat: "Innovation Partner",
+    level: "Innovation Partner",
+    tech: "Technology Solutions",
+    desc: "Supporting innovation by encouraging creative problem-solving and empowering participants with technology-driven solutions that transform ideas into impactful projects.",
+    url: "https://bindu.co.in"
+  },
+
+  {
+    name: "Insights",
+    cat: "Technology Partner",
+    level: "Technology Partner",
+    tech: "Digital Innovation",
+    desc: "Driving digital innovation by supporting emerging technologies, technical excellence, and collaborative learning experiences for aspiring developers and innovators.",
+    url: "https://insights.com"
+  }
 ];
 
 /* a small rotating set of geometric glyph paths so every card feels bespoke,
